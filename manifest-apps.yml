@@ -2,16 +2,16 @@
 memory: 384M
 instances: 1
 applications:
-- name: fortunes
+- name: fortune-service
   host: fortunes-${random-word}
-  path: fortunes/build/libs/fortunes-0.0.1-SNAPSHOT.jar
+  path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
-  - fortunes-db
+  - fortune-db
   - config-service
   - service-registry
-- name: fortunes-ui
+- name: fortune-ui
   host: fortunes-ui-${random-word}
-  path: ui/build/libs/ui-0.0.1-SNAPSHOT.jar
+  path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
   - config-service
   - service-registry

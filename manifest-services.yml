@@ -4,10 +4,10 @@ instances: 1
 applications:
 - name: config-server
   host: config-server-${random-word}
-  path: configserver/build/libs/configserver-0.0.1-SNAPSHOT.jar
+  path: fortune-teller-config-server/target/fortune-teller-config-server-0.0.1-SNAPSHOT.jar
 - name: eureka
   host: eureka-${random-word}
-  path: eureka/build/libs/eureka-0.0.1-SNAPSHOT.jar
+  path: fortune-teller-eureka/target/fortune-teller-eureka-0.0.1-SNAPSHOT.jar
 - name: hystrix-dashboard
   host: hystrix-dashboard-${random-word}
-  path: hystrixDashboard/build/libs/hystrixDashboard-0.0.1-SNAPSHOT.jar
+  path: fortune-teller-hystrix-dashboard/target/fortune-teller-hystrix-dashboard-0.0.1-SNAPSHOT.jar
