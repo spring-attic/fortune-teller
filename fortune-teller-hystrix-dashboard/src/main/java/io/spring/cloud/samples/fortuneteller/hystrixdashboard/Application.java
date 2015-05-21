@@ -1,4 +1,4 @@
-package io.pivotal.nfjsworkshop.hystrixdashboard;
+package io.spring.cloud.samples.fortuneteller.hystrixdashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
