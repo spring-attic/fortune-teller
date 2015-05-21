@@ -57,6 +57,8 @@ public class FortuneServicePactTest {
         Fortune fortune = fortuneService.randomFortune();
         assertNotNull(fortune);
         assertThat(fortune.getId(), is(greaterThan(0L)));
+        assertThat(fortune.getId(), is(not(equalTo(42L))));
         assertThat(fortune.getText(), not(isEmptyOrNullString()));
+        assertThat(fortune.getText(), is(not(equalTo("Your future is unclear."))));
     }
 }
