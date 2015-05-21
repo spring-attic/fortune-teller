@@ -11,7 +11,7 @@
     <name>Fortune Teller Cloud-Native Application</name>
 
     <modules>
-        <module>configserver</module>
+        <module>fortune-teller-config-server</module>
         <module>eureka</module>
         <module>fortunes</module>
         <module>hystrixDashboard</module>
