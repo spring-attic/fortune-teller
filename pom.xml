@@ -12,7 +12,7 @@
 
     <modules>
         <module>fortune-teller-config-server</module>
-        <module>eureka</module>
+        <module>fortune-teller-eureka</module>
         <module>fortunes</module>
         <module>hystrixDashboard</module>
         <module>ui</module>

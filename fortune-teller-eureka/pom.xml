@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.spring.cloud.samples</groupId>
-	<artifactId>eureka</artifactId>
+	<artifactId>fortune-teller-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka</name>
+	<name>fortune-teller-eureka</name>
 	<description>Eureka Server</description>
 
 	<parent>
@@ -19,7 +19,7 @@
 	</parent>
 
 	<properties>
-		<start-class>io.pivotal.nfjsworkshop.eureka.Application</start-class>
+		<start-class>io.spring.cloud.samples.fortuneteller.eureka.Application</start-class>
 	</properties>
 
 	<dependencies>
@@ -33,24 +33,4 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<requiresUnpack>
-						<dependency>
-							<groupId>com.netflix.eureka</groupId>
-							<artifactId>eureka-core</artifactId>
-						</dependency>
-						<dependency>
-							<groupId>com.netflix.eureka</groupId>
-							<artifactId>eureka-client</artifactId>
-						</dependency>
-					</requiresUnpack>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>
