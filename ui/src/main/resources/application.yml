@@ -21,8 +21,7 @@ ribbon:
 hystrix:
   command:
     randomFortune:
-      circuitBreaker:
-        enabled: false
+      execution.isolation.thread.timeoutInMilliseconds: 2000
 
 fortunes:
   ribbon:
