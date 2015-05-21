@@ -1,4 +1,4 @@
-package io.pivotal.nfjsworkshop.fortunes.domain;
+package io.spring.cloud.samples.fortuneteller.fortuneservice.domain;
 
 import javax.persistence.*;
 

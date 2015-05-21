@@ -1,6 +1,6 @@
-package io.pivotal.nfjsworkshop.fortunes.respositories;
+package io.spring.cloud.samples.fortuneteller.fortuneservice.respositories;
 
-import io.pivotal.nfjsworkshop.fortunes.domain.Fortune;
+import io.spring.cloud.samples.fortuneteller.fortuneservice.domain.Fortune;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;

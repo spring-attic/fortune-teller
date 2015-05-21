@@ -1,4 +1,4 @@
-package io.pivotal.nfjsworkshop.fortunes;
+package io.spring.cloud.samples.fortuneteller.fortuneservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

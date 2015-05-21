@@ -13,7 +13,7 @@
     <modules>
         <module>fortune-teller-config-server</module>
         <module>fortune-teller-eureka</module>
-        <module>fortunes</module>
+        <module>fortune-teller-fortune-service</module>
         <module>hystrixDashboard</module>
         <module>ui</module>
     </modules>
