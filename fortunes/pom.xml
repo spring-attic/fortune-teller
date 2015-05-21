@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>io.spring.cloud.samples</groupId>
+	<artifactId>fortunes</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>fortunes</name>
+	<description>Fortunes Service</description>
+
+	<parent>
+			<groupId>io.spring.cloud.samples</groupId>
+			<artifactId>fortune-teller</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<properties>
+		<start-class>io.pivotal.nfjsworkshop.fortunes.Application</start-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901-1.jdbc4</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>au.com.dius</groupId>
+				<artifactId>pact-jvm-provider-maven_2.11</artifactId>
+				<version>2.1.13</version>
+				<configuration>
+					<serviceProviders>
+						<!-- You can define as many as you need, but each must have a unique name -->
+						<serviceProvider>
+							<name>FortuneService</name>
+							<consumers>
+								<!-- Again, you can define as many consumers for each provider as you need, but each must have a unique name -->
+								<consumer>
+									<name>FortuneUi</name>
+									<!--  currently supports a file path using pactFile or a URL using pactUrl -->
+									<pactUrl>http://localhost:9292/pacts/provider/FortuneService/consumer/FortuneUi/latest</pactUrl>
+								</consumer>
+							</consumers>
+						</serviceProvider>
+					</serviceProviders>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
