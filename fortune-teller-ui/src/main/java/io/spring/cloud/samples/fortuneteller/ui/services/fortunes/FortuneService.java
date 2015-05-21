@@ -1,4 +1,4 @@
-package io.pivotal.nfjsworkshop.ui.services.fortunes;
+package io.spring.cloud.samples.fortuneteller.ui.services.fortunes;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;

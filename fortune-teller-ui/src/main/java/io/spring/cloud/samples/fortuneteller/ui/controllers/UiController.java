@@ -1,7 +1,7 @@
-package io.pivotal.nfjsworkshop.ui.controllers;
+package io.spring.cloud.samples.fortuneteller.ui.controllers;
 
-import io.pivotal.nfjsworkshop.ui.services.fortunes.Fortune;
-import io.pivotal.nfjsworkshop.ui.services.fortunes.FortuneService;
+import io.spring.cloud.samples.fortuneteller.ui.services.fortunes.Fortune;
+import io.spring.cloud.samples.fortuneteller.ui.services.fortunes.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

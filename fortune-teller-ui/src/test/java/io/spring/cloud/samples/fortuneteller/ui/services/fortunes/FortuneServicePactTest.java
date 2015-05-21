@@ -1,10 +1,9 @@
-package io.pivotal.nfjsworkshop.ui.services.fortunes;
+package io.spring.cloud.samples.fortuneteller.ui.services.fortunes;
 
 
 import au.com.dius.pact.consumer.*;
 import au.com.dius.pact.model.PactFragment;
-import io.pivotal.nfjsworkshop.ui.Application;
-import org.junit.Assert;
+import io.spring.cloud.samples.fortuneteller.ui.Application;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;

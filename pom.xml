@@ -15,7 +15,7 @@
         <module>fortune-teller-eureka</module>
         <module>fortune-teller-fortune-service</module>
         <module>fortune-teller-hystrix-dashboard</module>
-        <module>ui</module>
+        <module>fortune-teller-ui</module>
     </modules>
 
     <parent>

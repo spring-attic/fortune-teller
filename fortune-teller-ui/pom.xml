@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.spring.cloud.samples</groupId>
-    <artifactId>ui</artifactId>
+    <artifactId>fortune-teller-ui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ui</name>
+    <name>fortune-teller-ui</name>
     <description>Fortune Teller UI</description>
 
     <parent>
@@ -19,7 +19,7 @@
     </parent>
 
     <properties>
-        <start-class>io.pivotal.nfjsworkshop.ui.Application</start-class>
+        <start-class>io.spring.cloud.samples.fortuneteller.ui.Application</start-class>
     </properties>
 
     <dependencies>
