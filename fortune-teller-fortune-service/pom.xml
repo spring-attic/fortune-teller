@@ -63,7 +63,7 @@
 							<consumers>
 								<consumer>
 									<name>FortuneUi</name>
-									<pactFile>../target/pacts/FortuneUi-FortuneService.json</pactFile>
+									<pactFile>../fortune-teller-ui/target/pacts/FortuneUi-FortuneService.json</pactFile>
 								</consumer>
 							</consumers>
 						</serviceProvider>
