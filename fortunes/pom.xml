@@ -58,15 +58,12 @@
 				<version>2.1.13</version>
 				<configuration>
 					<serviceProviders>
-						<!-- You can define as many as you need, but each must have a unique name -->
 						<serviceProvider>
 							<name>FortuneService</name>
 							<consumers>
-								<!-- Again, you can define as many consumers for each provider as you need, but each must have a unique name -->
 								<consumer>
 									<name>FortuneUi</name>
-									<!--  currently supports a file path using pactFile or a URL using pactUrl -->
-									<pactUrl>http://localhost:9292/pacts/provider/FortuneService/consumer/FortuneUi/latest</pactUrl>
+									<pactFile>../target/pacts/FortuneUi-FortuneService.json</pactFile>
 								</consumer>
 							</consumers>
 						</serviceProvider>
@@ -75,4 +72,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
