@@ -1,19 +1,20 @@
 ---
-memory: 384M
 instances: 1
+memory: 512M
 applications:
 - name: fortune-service
-  host: fortunes-${random-word}
+  host: fortunes
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
   - fortune-db
-  - config-service
+  - config-server
   - service-registry
   env:
-        SPRING_PROFILES_ACTIVE: pws
+      SPRING_PROFILES_ACTIVE: pcf
 - name: fortune-ui
-  host: fortunes-ui-${random-word}
+  host: fortunes-ui
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
-  - config-service
+  - config-server
   - service-registry
+  - circuit-breaker
