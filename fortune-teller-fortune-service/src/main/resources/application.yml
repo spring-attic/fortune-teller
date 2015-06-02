@@ -13,6 +13,13 @@ spring:
 ---
 
 spring:
-  profiles: cloud
+  profiles: pcf
+  jpa:
+    database: MYSQL
+
+---
+
+spring:
+  profiles: pws
   jpa:
     database: POSTGRESQL
