@@ -6,7 +6,7 @@ applications:
   host: fortunes-${random-word}
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
-  - fortune-db
+  - fortunes-db
   - config-service
   - service-registry
   env:

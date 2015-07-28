@@ -19,9 +19,9 @@
     </modules>
 
     <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>1.0.2.RELEASE</version>
+        <groupId>io.pivotal.spring.cloud</groupId>
+        <artifactId>spring-cloud-services-starter-parent</artifactId>
+        <version>1.0.0.BUILD-SNAPSHOT</version>
         <relativePath/>
         <!-- lookup parent from repository -->
     </parent>
@@ -40,16 +40,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.pivotal.spring.cloud</groupId>
-            <artifactId>spring-cloud-pivotal-cloudfoundry-connector</artifactId>
-            <version>1.0.0.M1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.pivotal.spring.cloud</groupId>
-            <artifactId>spring-cloud-pivotal-spring-connector</artifactId>
-            <version>1.0.0.M1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
