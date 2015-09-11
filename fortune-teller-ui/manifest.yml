@@ -1,0 +1,9 @@
+---
+applications:
+- name: fortune-ui
+  memory: 384M
+  instances: 1
+  host: fortunes-ui-${random-word}
+  services:
+    - config-service
+    - service-registry
