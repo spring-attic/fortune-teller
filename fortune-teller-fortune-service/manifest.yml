@@ -1,0 +1,13 @@
+---
+memory: 384M
+instances: 1
+applications:
+- name: fortune-service
+  host: fortunes-${random-word}
+  path: target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
+  services:
+  - fortune-db
+  - config-service
+  - service-registry
+  env:
+    SPRING_PROFILES_ACTIVE: pws
