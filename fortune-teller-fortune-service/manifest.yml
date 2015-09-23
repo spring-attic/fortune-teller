@@ -1,12 +1,12 @@
 ---
+memory: 384M
+instances: 1
 applications:
 - name: fortune-service
-  memory: 384M
-  instances: 1
   host: fortunes-${random-word}
   services:
-    - fortune-db
-    - config-service
-    - service-registry
+  - fortune-db
+  - config-service
+  - service-registry
   env:
     SPRING_PROFILES_ACTIVE: pws
