@@ -10,7 +10,8 @@ applications:
   - config-server
   - service-registry
   env:
-      SPRING_PROFILES_ACTIVE: pcf
+    SPRING_PROFILES_ACTIVE: pcf
+    CF_TARGET: https://api.cf.deepsouthcloud.com
 - name: fortune-ui
   host: fortunes-ui
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
@@ -18,3 +19,5 @@ applications:
   - config-server
   - service-registry
   - circuit-breaker
+  env:
+    CF_TARGET: https://api.cf.deepsouthcloud.com
