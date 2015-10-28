@@ -9,6 +9,14 @@ fortunes:
   ribbon:
     ServerListRefreshInterval: 5000
 
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
 ---
 
 spring:

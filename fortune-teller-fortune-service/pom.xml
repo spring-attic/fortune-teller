@@ -25,11 +25,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.pivotal.spring.cloud</groupId>
-			<artifactId>cloudfoundry-certificate-truster</artifactId>
-			<version>1.0.0.BUILD-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>io.pivotal.spring.cloud</groupId>
 			<artifactId>spring-cloud-services-starter-config-client</artifactId>
 		</dependency>
 		<dependency>
