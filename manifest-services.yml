@@ -5,9 +5,9 @@ applications:
 - name: config-server
   host: config-server-${random-word}
   path: fortune-teller-config-server/target/fortune-teller-config-server-0.0.1-SNAPSHOT.jar
-- name: eureka
+- name: service-registry
   host: eureka-${random-word}
   path: fortune-teller-eureka/target/fortune-teller-eureka-0.0.1-SNAPSHOT.jar
-- name: hystrix-dashboard
+- name: circuit-breaker
   host: hystrix-dashboard-${random-word}
   path: fortune-teller-hystrix-dashboard/target/fortune-teller-hystrix-dashboard-0.0.1-SNAPSHOT.jar
