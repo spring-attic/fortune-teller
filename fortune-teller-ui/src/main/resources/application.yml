@@ -5,6 +5,9 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
 
+ribbon:
+  IsSecure: false
+
 fortunes:
   ribbon:
     ServerListRefreshInterval: 5000

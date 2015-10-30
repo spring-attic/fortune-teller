@@ -9,13 +9,13 @@ applications:
   - fortune-db
   - config-server
   - service-registry
-  - circuit-breaker
 - name: fortune-ui
   host: fortunes-ui
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
   - config-server
   - service-registry
+  - circuit-breaker
 env:
   SPRING_PROFILES_ACTIVE: pcf
   CF_TARGET: https://api.cf.deepsouth.com
