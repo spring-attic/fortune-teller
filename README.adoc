@@ -59,23 +59,21 @@ $ cf push -f manifest-services.yml
 +
 This will push a Spring Cloud Config Server, a Eureka server, and a Hystrix Dashboard, all with random routes.
 
-. Edit `scripts/create_services.sh` to add the random routes that were generated for you:
+. Run `./scripts/provision_services.sh` to register these services and provision a Postgres database:
 +
 ----
-cf cups config-service -p '{"uri":"http://config-server-fluxional-suttee.cfapps.io"}'
-cf cups service-registry -p '{"uri":"http://eureka-unprevalent-toper.cfapps.io"}'
-cf cs elephantsql turtle fortunes-db
-----
+$ scripts/provision_services.sh
+Provisioning service registry, config server and database as backing services
 
-. Run `scripts/create-services.sh` to create the services that you need:
-+
-----
-$ scripts/create_services.sh
-Creating user provided service config-service in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
+Creating user provided service config-service in org Example / space Example as user@company.com...
 OK
-Creating user provided service service-registry in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
+
+Registering service registry application instance 'eureka-example.cfapps.io' as a backing service
+Creating user provided service service-registry in org Example / space Example as user@company.com...
 OK
-Creating service fortunes-db in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
+
+Provisioning PostgreSQL database
+Creating service fortune-db in org Example / space Example as user@company.com...
 OK
 ----
 
@@ -85,7 +83,15 @@ OK
 $ cf push -f manifest-apps.yml
 ----
 +
-This will push the fortunes service and the ui application.
+This will push the fortune-service and the fortune-ui application.
+
+. Check the application routes created for your new microservices:
++
+----
+$ cf apps
+----
++
+This will show the custom URLs to access your fortune-ui web application and Hystrix dashboard.
 
 == Testing the Application
 
@@ -94,11 +100,13 @@ This will push the fortunes service and the ui application.
 image:docs/images/fortunes_1.png[]
 
 . Now, in another browser tab, access the Hystrix Dashboard at the route that was created for you.
-Enter the route for the UI application and click the ``Monitor Stream.''
+Enter the route for the fortune-ui application and click the ``Monitor Stream.'' 
 +
-NOTE: On Pivotal Cloud Foundry, you can access a pre-configured Hystrix Dashboard by clicking on the *Manage* link for *Circuit Breaker Dashboard*. You will *NOT* need to paste in the route.
+NOTE: On Pivotal Cloud Foundry, you can access a pre-configured Hystrix Dashboard by clicking on the *Manage* link for *Circuit Breaker Dashboard*. You will *NOT* need to paste in the route. 
 +
 image:docs/images/fortunes_2.png[]
+
+Note to modify this to your custom fortune-ui URL including a leading 'http://'' and trailing '/hystrix.stream'.
 
 . Access the fortunes-ui and show that the circuit breaker is registering successful requests.
 +
@@ -127,3 +135,6 @@ $ cf start fortunes
 . Continue to access the fortunes-ui and watch the dashboard.
 After the fortunes service has re-registered with Eureka and the fortunes-ui load balancer caches are refreshed, you will see the circuit breaker recover.
 You should then start getting random fortunes again!
+
+== Teardown
+When you're done with the application, you can quickly delete the Fortune Teller application instances and services by running ./scripts/teardown.sh
