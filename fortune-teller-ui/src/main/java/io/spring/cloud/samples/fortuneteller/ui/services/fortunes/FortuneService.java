@@ -4,7 +4,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 @EnableConfigurationProperties(FortuneProperties.class)
@@ -14,11 +13,11 @@ public class FortuneService {
     FortuneProperties fortuneProperties;
 
     @Autowired
-    RestTemplate restTemplate;
+    FortunesClient fortunesClient;
 
     @HystrixCommand(fallbackMethod = "fallbackFortune")
     public Fortune randomFortune() {
-        return restTemplate.getForObject("http://fortunes/random", Fortune.class);
+        return fortunesClient.randomFortune();
     }
 
     private Fortune fallbackFortune() {
