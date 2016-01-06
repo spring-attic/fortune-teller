@@ -3,6 +3,17 @@ spring:
     hibernate:
       ddl-auto: create-drop
 
+ribbon:
+  IsSecure: false
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
 ---
 
 spring:

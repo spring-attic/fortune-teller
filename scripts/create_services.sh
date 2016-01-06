@@ -1,3 +1,3 @@
-cf cups config-service -p '{"uri":"http://config-server-unvariegated-capitulary.cfapps.io/"}'
-cf cups service-registry -p '{"uri":"http://eureka-psoatic-cirrocumulus.cfapps.io/"}'
-cf cs elephantsql turtle fortune-db
+cf cups config-service -p '{"uri":"https://config-server-conglomeratic-packman.apps.indigo.springapps.io/"}'
+cf cups service-registry -p '{"uri":"https://eureka-unpropounded-serialization.apps.indigo.springapps.io/"}'
+#cf cs elephantsql turtle fortunes-db

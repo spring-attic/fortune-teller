@@ -6,11 +6,9 @@ applications:
   host: fortunes
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
-  - fortune-db
+  - fortunes-db
   - config-service
   - service-registry
-  env:
-      SPRING_PROFILES_ACTIVE: pcf
 - name: fortune-ui
   host: fortunes-ui
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
@@ -18,3 +16,6 @@ applications:
   - config-service
   - service-registry
   - circuit-breaker
+env:
+  SPRING_PROFILES_ACTIVE: pcf
+  CF_TARGET: https://api.cf.deepsouth.com
