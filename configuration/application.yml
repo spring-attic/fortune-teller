@@ -1,0 +1,36 @@
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8080}}
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+foo: barnyardAnimal
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+
+---
+spring:
+  profiles: lattice
+  application:
+    index: ${instance.index}
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka.192.168.11.11.xip.io/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${instance.guid}:${spring.application.name}:${server.port:8080}
+    hostname: ${cf.instance.ip}
+    nonSecurePort: ${cf.instance.port}
