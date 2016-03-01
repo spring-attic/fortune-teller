@@ -26,7 +26,7 @@ Maven will automatically download all of _Fortune Teller_'s dependencies. This m
 . Run `scripts/create-services.sh` to create the services that you need:
 +
 ----
-$ ./create_services_pcf.sh
+$ ./scripts/create_services_pcf.sh
 Creating service fortune-db in org microservices / space fortune-teller as admin...
 OK
 Creating service config-service in org microservices / space fortune-teller as admin...
@@ -37,7 +37,7 @@ Creating service circuit-breaker in org microservices / space fortune-teller as 
 OK
 ----
 
-. In the Pivotal Cloud Foundry App Manager console, click on the *Manage* links for the *Config Server*. Once the service is initialized and the web form appears, paste https://github.com/mstine/config-repo into the *Git URI* field and click *Submit*.
+. In the Pivotal Cloud Foundry Apps Manager console, click on the *Manage* link for the *Config Server*. Once the service is initialized and the web form appears, paste the URL of this repository (https://github.com/spring-cloud-samples/fortune-teller) into the *Git URI* field and "configuration" into the *Search Paths* field. Then click *Submit*.
 
 . Also click on the *Manage* links for the *Service Registry* and *Circuit Breaker*. Make sure the services are finished initializing before you proceed.
 
