@@ -23,7 +23,7 @@ Maven will automatically download all of _Fortune Teller_'s dependencies. This m
 
 == Deploying to Pivotal Cloud Foundry with Spring Cloud Services
 
-. Run `scripts/create-services.sh` to create the services that you need:
+. Run `scripts/create_services_pcf.sh` to create the services that you need:
 +
 ----
 $ ./scripts/create_services_pcf.sh
@@ -70,7 +70,7 @@ cf cups service-registry -p '{"uri":"http://eureka-unprevalent-toper.cfapps.io"}
 cf cs elephantsql turtle fortunes-db
 ----
 
-. Run `scripts/create-services.sh` to create the services that you need:
+. Run `scripts/create_services.sh` to create the services that you need:
 +
 ----
 $ scripts/create_services.sh
