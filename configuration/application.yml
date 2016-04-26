@@ -1,7 +1,7 @@
 server:
   port: 8080
 
-foo: barnyardAnimal
+foo: peanutButterAndJelly
 
 ---
 spring:
