@@ -29,7 +29,7 @@ Maven will automatically download all of _Fortune Teller_'s dependencies. This m
 $ ./scripts/create_services_pcf.sh
 Creating service fortune-db in org microservices / space fortune-teller as admin...
 OK
-Creating service config-service in org microservices / space fortune-teller as admin...
+Creating service config-server in org microservices / space fortune-teller as admin...
 OK
 Creating service service-registry in org microservices / space fortune-teller as admin...
 OK
@@ -65,7 +65,7 @@ This will push a Spring Cloud Config Server, a Eureka server, and a Hystrix Dash
 . Edit `scripts/create_services.sh` to add the random routes that were generated for you:
 +
 ----
-cf cups config-service -p '{"uri":"http://config-server-fluxional-suttee.cfapps.io"}'
+cf cups config-server -p '{"uri":"http://config-server-fluxional-suttee.cfapps.io"}'
 cf cups service-registry -p '{"uri":"http://eureka-unprevalent-toper.cfapps.io"}'
 cf cs elephantsql turtle fortunes-db
 ----
@@ -74,7 +74,7 @@ cf cs elephantsql turtle fortunes-db
 +
 ----
 $ scripts/create_services.sh
-Creating user provided service config-service in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
+Creating user provided service config-server in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
 OK
 Creating user provided service service-registry in org platform-eng / space nfjs-workshop as mstine@pivotal.io...
 OK

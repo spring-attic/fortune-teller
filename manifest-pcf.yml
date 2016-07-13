@@ -7,13 +7,13 @@ applications:
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
   - fortunes-db
-  - config-service
+  - config-server
   - service-registry
 - name: fortune-ui
   host: fortunes-ui
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
-  - config-service
+  - config-server
   - service-registry
   - circuit-breaker
 env:
