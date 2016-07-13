@@ -1,6 +1,6 @@
 ---
 instances: 1
-memory: 512M
+memory: 1024M
 applications:
 - name: fortune-service
   host: fortunes
