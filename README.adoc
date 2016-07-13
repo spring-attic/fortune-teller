@@ -37,9 +37,7 @@ Creating service circuit-breaker-dashboard in org microservices / space fortune-
 OK
 ----
 
-. In the Pivotal Cloud Foundry Apps Manager console, click on the *Manage* link for the *Config Server*. Once the service is initialized and the web form appears, paste the URL of this repository (https://github.com/spring-cloud-samples/fortune-teller) into the *Git URI* field and "configuration" into the *Search Paths* field. Then click *Submit*.
-
-. Also click on the *Manage* links for the *Service Registry* and *Circuit Breaker*. Make sure the services are finished initializing before you proceed.
+. Click on the *Manage* links for the *Config Service*, *Service Registry*, and *Circuit Breaker Dashboard*. Make sure the services are finished initializing before you proceed.
 
 . Edit the `manifest-pcf.yml` file to specify the Cloud Foundry target the apps are being pushed to, replacing the URL in `CF_TARGET: https://api.cf.deepsouthcloud.com` with the API endpoint for your Cloud Foundry deployment.
 
