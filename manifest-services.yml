@@ -8,6 +8,6 @@ applications:
 - name: service-registry
   host: eureka-${random-word}
   path: fortune-teller-eureka/target/fortune-teller-eureka-0.0.1-SNAPSHOT.jar
-- name: circuit-breaker
+- name: circuit-breaker-dashboard
   host: hystrix-dashboard-${random-word}
   path: fortune-teller-hystrix-dashboard/target/fortune-teller-hystrix-dashboard-0.0.1-SNAPSHOT.jar

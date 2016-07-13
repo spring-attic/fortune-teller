@@ -15,7 +15,7 @@ applications:
   services:
   - config-server
   - service-registry
-  - circuit-breaker
+  - circuit-breaker-dashboard
 env:
   SPRING_PROFILES_ACTIVE: pcf
   CF_TARGET: https://api.cf.deepsouth.com
