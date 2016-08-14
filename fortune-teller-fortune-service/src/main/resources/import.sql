@@ -1,7 +1,7 @@
 insert into fortunes (id, text) values (1000, 'People are naturally attracted to you.');
 insert into fortunes (id, text) values (1001, 'You learn from your mistakes... You will learn a lot today.');
-insert into fortunes (id, text) values (1002, 'If you have something good in your life, don't let it go!');
-insert into fortunes (id, text) values (1003, 'What ever you're goal is in life, embrace it visualize it, and for it will be yours.');
+insert into fortunes (id, text) values (1002, 'If you have something good in your life, don''t let it go!');
+insert into fortunes (id, text) values (1003, 'What ever you''re goal is in life, embrace it visualize it, and for it will be yours.');
 insert into fortunes (id, text) values (1004, 'Your shoes will make you happy today.');
 insert into fortunes (id, text) values (1005, 'You cannot love life until you live the life you love.');
 insert into fortunes (id, text) values (1006, 'Be on the lookout for coming events; They cast their shadows beforehand.');
@@ -10,7 +10,7 @@ insert into fortunes (id, text) values (1008, 'The man or woman you desire feels
 insert into fortunes (id, text) values (1009, 'Meeting adversity well is the source of your strength.');
 insert into fortunes (id, text) values (1010, 'A dream you have will come true.');
 insert into fortunes (id, text) values (1011, 'Our deeds determine us, as much as we determine our deeds.');
-insert into fortunes (id, text) values (1012, 'Never give up. You're not a failure if you don't give up.');
+insert into fortunes (id, text) values (1012, 'Never give up. You''re not a failure if you don''t give up.');
 insert into fortunes (id, text) values (1013, 'You will become great if you believe in yourself.');
 insert into fortunes (id, text) values (1014, 'There is no greater pleasure than seeing your loved ones prosper.');
 insert into fortunes (id, text) values (1015, 'You will marry your lover.');
