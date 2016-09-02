@@ -1,5 +1,6 @@
 spring:
   jpa:
+    database: HSQL
     hibernate:
       ddl-auto: create-drop
 
@@ -13,24 +14,3 @@ security:
 management:
   security:
     enabled: false
-
----
-
-spring:
-  profiles: default
-  jpa:
-    database: HSQL
-
----
-
-spring:
-  profiles: pcf
-  jpa:
-    database: MYSQL
-
----
-
-spring:
-  profiles: pws
-  jpa:
-    database: POSTGRESQL
