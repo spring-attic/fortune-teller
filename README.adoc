@@ -7,8 +7,7 @@
 
 It leverages libraries and services from Spring Cloud and Netflix OSS to compose the system.
 
-Fortune Teller is deployable to any Cloud Foundry environment utilizing the service components that have been packaged with the project.
-However, it is most easily deployed to Pivotal Cloud Foundry environments that have installed the https://network.pivotal.io/products/p-spring-cloud-services[Spring Cloud Services] package.
+NOTE: Want to deploy Fortune Teller to Pivotal Cloud Foundry environments that have installed the https://network.pivotal.io/products/p-spring-cloud-services[Spring Cloud Services] package? See the link:https://github.com/spring-cloud-services-samples/fortune-teller[SCS version of Fortune Teller].
 
 == Build
 
