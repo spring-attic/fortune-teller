@@ -6,4 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/mstine/config-repo.git
+          uri: https://github.com/spring-cloud-samples/fortune-teller
+          searchPaths: configuration
