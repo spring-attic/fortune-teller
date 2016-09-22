@@ -21,6 +21,7 @@ public class FortuneService {
         return restTemplate.getForObject("http://fortunes/random", Fortune.class);
     }
 
+    @SuppressWarnings("unused")
     private Fortune fallbackFortune() {
         return new Fortune(42L, fortuneProperties.getFallbackFortune());
     }
