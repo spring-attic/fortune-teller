@@ -65,8 +65,8 @@ This will push a Spring Cloud Config Server, a Eureka server, and a Hystrix Dash
 . Edit `scripts/create_services.sh` to add the random routes that were generated for you:
 +
 ----
-cf cups config-service -p '{"uri":"http://config-server-fluxional-suttee.cfapps.io"}'
-cf cups service-registry -p '{"uri":"http://eureka-unprevalent-toper.cfapps.io"}'
+cf cups config-service -p '{"uri":"https://config-server-fluxional-suttee.cfapps.io"}'
+cf cups service-registry -p '{"uri":"https://eureka-unprevalent-toper.cfapps.io"}'
 cf cs elephantsql turtle fortunes-db
 ----
 
