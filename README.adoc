@@ -1,3 +1,6 @@
+# This repository is no longer actively maintained by VMware, Inc.
+
+
 = Fortune Teller
 
 *Fortune Teller* is a very basic application composed of two services:
